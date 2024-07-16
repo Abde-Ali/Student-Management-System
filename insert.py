@@ -23,8 +23,8 @@ class insertdata:
                 INSERT INTO COURSE VALUES(
                          '{cid}',
                          '{cname}',
-                         '{sid}'
-                         
+                         '{sid}',
+                         "{price}"
                          )''')
         self.conn.commit()
         print("=====Data Added Sucessfully=====")

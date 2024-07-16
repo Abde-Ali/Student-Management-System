@@ -5,8 +5,9 @@ class updatedata:
         self.conn = sqlite3.connect('sms.db')
         self.cur = self.conn.cursor()
 
-    def updatestudent(self, sid, **kwargs):
-        for column, value in kwargs.items():
+    def updatestudent(self, sid,sname=None,email=None,city=None):
+        column = [sname,email,city]
+        for column, value in column:
             if value:
                 self.cur.execute(f'''
                     UPDATE STUDENT
